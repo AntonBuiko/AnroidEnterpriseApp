@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="201dp"
+    tools:layout_editor_absoluteY="135dp">
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student"
+            android:layout_margin="15dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonListener"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Listener"
+            android:layout_margin="15dp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/nextButt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_margin="15dp"
+        android:onClick="moveNextActivity"/>
+
+    <Button
+        android:id="@+id/backButt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_margin="15dp"
+        android:onClick="moveBackActivity"/>
+
+</LinearLayout>

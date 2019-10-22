@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PROGA2_LABA</string>
+    <string name="inputFirstNameLabel">Input First Name</string>
+    <string name="inputLastNameLabel">Input Last Name</string>
+    <string name="inputEmail">Input Email</string>
+    <string name="inputAge">Input Age</string>
+
+    <string-array name="org_array">
+        <item>BELSTU</item>
+        <item>BELSU</item>
+        <item>BELSUAR</item>
+        <item>BELSITU</item>
+        <item>BELHABZA</item>
+        <item>MGU</item>
+        <item>BarGu</item>
+    </string-array>
+</resources>

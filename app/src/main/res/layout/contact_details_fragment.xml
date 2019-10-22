@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="personViewModel"
+            type="com.example.proga2_laba.viewmodel.PersonViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.UI.ContactDetails">
+    <EditText
+        android:id="@+id/inputFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:ems="10"
+        android:text="@={personViewModel.person.firstName}"
+        android:hint="@string/inputFirstNameLabel"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:autofillHints="@string/inputFirstNameLabel" />
+
+    <EditText
+        android:id="@+id/inputLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:autofillHints="@string/inputLastNameLabel"
+        android:ems="10"
+        android:hint="@string/inputLastNameLabel"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@={personViewModel.person.lastName}" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:autofillHints="@string/inputEmail"
+        android:ems="10"
+        android:hint="@string/inputEmail"
+        android:inputType="textWebEmailAddress"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@={personViewModel.person.email}" />
+
+    <EditText
+        android:id="@+id/inputAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:autofillHints="@string/inputAge"
+        android:ems="10"
+        android:digits="0123456789."
+        android:hint="@string/inputAge"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:text="@={`` + personViewModel.person.age}" />
+
+</LinearLayout>
+    </ScrollView>
+</layout>
