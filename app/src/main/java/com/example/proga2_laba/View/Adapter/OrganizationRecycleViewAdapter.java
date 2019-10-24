@@ -37,6 +37,7 @@ public class OrganizationRecycleViewAdapter extends RecyclerView.Adapter<Organiz
 
     @Override
     public void onBindViewHolder(@NonNull OrganizationViewHolder holder, int position) {
+        Organization o = items.get(position);
         holder.bind(items.get(position));
     }
 
@@ -45,7 +46,7 @@ public class OrganizationRecycleViewAdapter extends RecyclerView.Adapter<Organiz
         return items != null ? items.size() : 0;
     }
 
-    public static class OrganizationViewHolder extends RecyclerView.ViewHolder {
+    public class OrganizationViewHolder extends RecyclerView.ViewHolder{
         private OrgListItemBinding binding;
 
         public OrganizationViewHolder(@NonNull OrgListItemBinding orgListItemBinding){

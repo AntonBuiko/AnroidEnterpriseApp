@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.proga2_laba.R;
 import com.example.proga2_laba.databinding.ContactDetailsFragmentBinding;
+import com.example.proga2_laba.viewmodel.MainViewModel;
 import com.example.proga2_laba.viewmodel.PersonViewModel;
 
 public class ContactDetails extends Fragment {
@@ -31,7 +32,6 @@ public class ContactDetails extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        personViewModel = ViewModelProviders.of(getActivity()).get(PersonViewModel.class);
         page = getArguments().getInt("page", 0);
     }
 
@@ -53,6 +53,7 @@ public class ContactDetails extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        personViewModel = ViewModelProviders.of(getActivity()).get(MainViewModel.class).getPersonViewModel();
     }
 
 }

@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="personViewModel"
-            type="com.example.proga2_laba.viewmodel.PersonViewModel" />
+            name="organizationViewModel"
+            type="com.example.proga2_laba.viewmodel.OrganizationViewModel" />
     </data>
     <LinearLayout
         android:orientation="vertical"
@@ -17,12 +17,18 @@
             android:text="Select your organization: "
             android:textSize="30dp"
             android:layout_margin="10dp"/>
+        <Spinner
+            android:id="@+id/planets_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:data="@{organizationViewModel.organizationList}"
+            android:selection="@={organizationViewModel.selectionIndex}"/>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/my_recycler_view"
             android:scrollbars="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:data="@{personViewModel.liveDataOrganization}"
-            app:adapter="@{personViewModel.recycleViewAdapter}"/>
+            app:data="@{organizationViewModel.organizationList}"
+            app:adapter="@{organizationViewModel.recycleViewAdapter}" />
     </LinearLayout>
 </layout>
